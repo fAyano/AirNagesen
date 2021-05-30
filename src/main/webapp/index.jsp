@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>トップページ</title>
 </head>
 <body>
 <h1>これはトップページです。</h1>
+<a href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a>
 </body>
 </html>
