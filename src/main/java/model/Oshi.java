@@ -7,7 +7,7 @@ public class Oshi implements Serializable{
 	private String name;
 	private int totalMoney, totalFans;
 	
-	public Oshi() {}
+	public Oshi() {}	
 	
 	public Oshi(String name) {
 		this.name = name;
