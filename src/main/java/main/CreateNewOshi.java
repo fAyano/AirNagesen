@@ -38,6 +38,7 @@ public class CreateNewOshi extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//リクエストパラメータを取得
+		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("name");
 		String firstMoney =  request.getParameter("firstMoney");
 		
@@ -45,6 +46,7 @@ public class CreateNewOshi extends HttpServlet {
 		Oshi oshi = new Oshi();
 		oshi.setName(name);
 		oshi.addTotalMoney(Integer.parseInt(firstMoney));
+		oshi.addTotalFans();
 		
 		//リクエストスコープに保存
 		request.setAttribute("oshi", oshi);

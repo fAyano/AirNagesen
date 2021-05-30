@@ -15,6 +15,12 @@ public class Oshi implements Serializable{
 		totalFans = 1;
 	}
 	
+	public Oshi(String name, int firstMoney) {
+		this.name = name;
+		this.totalMoney = firstMoney;
+		this.totalFans = 1;
+	}
+	
 	public String getName() {
 		return name;
 	}
