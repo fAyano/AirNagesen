@@ -43,10 +43,7 @@ public class CreateNewOshi extends HttpServlet {
 		String firstMoney =  request.getParameter("firstMoney");
 		
 		//入力された値をプロパティに設定
-		Oshi oshi = new Oshi();
-		oshi.setName(name);
-		oshi.addTotalMoney(Integer.parseInt(firstMoney));
-		oshi.addTotalFans();
+		Oshi oshi = new Oshi(name, Integer.parseInt(firstMoney));
 		
 		//リクエストスコープに保存
 		request.setAttribute("oshi", oshi);

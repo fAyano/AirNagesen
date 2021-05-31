@@ -9,12 +9,6 @@ public class Oshi implements Serializable{
 	
 	public Oshi() {}	
 	
-	public Oshi(String name) {
-		this.name = name;
-		totalMoney = 0;
-		totalFans = 1;
-	}
-	
 	public Oshi(String name, int firstMoney) {
 		this.name = name;
 		this.totalMoney = firstMoney;
