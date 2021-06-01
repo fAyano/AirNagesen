@@ -41,9 +41,10 @@ public class CreateNewOshi extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("name");
 		String firstMoney =  request.getParameter("firstMoney");
+		String userName=request.getParameter("userName");
 		
 		//入力された値をプロパティに設定
-		Oshi oshi = new Oshi(name, Integer.parseInt(firstMoney));
+		Oshi oshi = new Oshi(name, Integer.parseInt(firstMoney),userName);
 		
 		//リクエストスコープに保存
 		request.setAttribute("oshi", oshi);
