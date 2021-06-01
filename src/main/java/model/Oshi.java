@@ -45,8 +45,4 @@ public class Oshi implements Serializable{
 		return userName;
 	}
 	
-	public void setUserName(String userName) {
-		this.userName=userName;
-	}
-	
 }
