@@ -1,9 +1,6 @@
 package model;
 
-import java.io.Serializable;
-
-@SuppressWarnings("serial")
-public class Oshi implements Serializable{
+public class Oshi {
 	private String name;//(推しの)名前
 	private int totalMoney, totalFans;//貢がれた総額、ファンの総数
 	private String userName;//作成したUserの名前
