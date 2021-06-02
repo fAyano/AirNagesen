@@ -14,7 +14,11 @@
 4. pushする
 5. GitHub上でプルリクエストを作成する
 6. 他のメンバーがコードの変更を`Files changes`から確認して、適宜コメントをつける
-7. 問題がなければmarge
+7. 問題がなければmerge
 8. eclipse上でmainブランチに移動(AirNagesenの上で右クリック → Team→Switch to → main)
 9. 最新の状態にするためにpullする (AirNagesenの上で右クリック → Team → pull)
 10. 1に戻る
+
+## 開発時の決め事
+- プルリクは2人がレビューしてからmergeする
+- 2人目がapprove出したら、その人がmergeする
