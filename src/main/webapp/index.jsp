@@ -4,10 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>トップページ</title>
+<title>ログイン画面</title>
 </head>
 <body>
-<h1>これはトップページです。</h1>
-<a href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a>
+	<h1>エア投げ銭</h1>
+	<form action="/AirNagesen/Login" method="post">
+		ユーザー名：<input type="text" name="name"><br>
+		パスワード：<input type="password" name="pass"><br>
+		<input type="submit" value="ログイン">
+	</form>	
 </body>
 </html>
