@@ -11,9 +11,8 @@
 <body>
 	<h1>エア投げ銭</h1>
 	<% if(loginUser != null){ %>
-		<p>ログインに成功しました！ようこそ、<%= loginUser.getName() %>さん</p>
-		
-		<a href="/AirNagesen/Main.jsp">推し一覧画面へ</a>
+		<p>ログインに成功しました！ようこそ、<%= loginUser.getName() %>さん</p>		
+		<a href="/AirNagesen/Main">推し一覧画面へ</a>
 	<% }else{ %>
 		<p>ログインに失敗しました</p>
 		<a href="/AirNagesen">トップへ</a>
