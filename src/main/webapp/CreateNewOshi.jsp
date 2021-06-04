@@ -21,5 +21,6 @@
 		<br/>
 		<input type="submit" value="登録">
 	</form>
+	<a href="/AirNagesen/Main.jsp">推し一覧画面に戻る</a>
 </body>
 </html>
