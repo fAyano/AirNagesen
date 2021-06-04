@@ -24,4 +24,4 @@
 - 2人目がapprove出したら、その人がmergeする
 
 ## クラス図
-<img width="884" alt="スクリーンショット 2021-06-04 16 40 48" src="https://user-images.githubusercontent.com/66374097/120765402-24304500-c554-11eb-89e7-49042c99eda6.png">
+<img width="882" alt="スクリーンショット 2021-06-04 16 48 50" src="https://user-images.githubusercontent.com/66374097/120766055-cd773b00-c554-11eb-97f9-7f432336a93c.png">
