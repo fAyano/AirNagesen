@@ -45,12 +45,13 @@ public class CreateNewOshi extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("name");
 		String firstMoney =  request.getParameter("firstMoney");
-		String userName=request.getParameter("userName");
+		
 		//
-		String pass=request.getParameter("pass");
+		ServletContext session = getServletContext();
+		User loginUser = (User)session.getAttribute("loginUser");
 		
 		//入力された値をプロパティに設定
-		Oshi oshi = new Oshi(name, Integer.parseInt(firstMoney),userName);
+		Oshi oshi = new Oshi(name, Integer.parseInt(firstMoney),loginUser.getName());
 		
 		//リクエストスコープに保存
 		request.setAttribute("oshi", oshi);
@@ -62,34 +63,26 @@ public class CreateNewOshi extends HttpServlet {
 		//アプリケーションスコープの作成,取得
 		ServletContext application = this.getServletContext();
 		
-		//入力された値をプロパティに設定
-		User user = new User(name, pass);
+		//推しリストをアプリケーションスコープから取得
+		List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
+		oshiList.add(oshi);
+		//アプリケーションコープに保存
+		application.setAttribute("oshiList", oshiList);
 		
-		List<Oshi> oshiList = null;
+		//推しをoshiMenに追加する
+		loginUser.addNewOshi(oshi);
 		
 		//初回ログインの場合
 		if(application.getAttribute("oshi")==null) {
-			oshiList = (List<Oshi>) application.getAttribute("oshiList");
-			oshiList.add(oshi);
-			//アプリケーションコープに保存
-			application.setAttribute("oshiList", oshiList);
-			//推しをoshiMenに追加する
-			
 			//貢いだ総額
 			int totalMoney=Integer.valueOf(firstMoney);
-			user.addTotalMoney(totalMoney);
+			loginUser.addTotalMoney(totalMoney);
 		}else {
 			//２回目以降のログイン
-			oshiList.add(oshi);
-			//アプリケーションコープに保存
-			application.setAttribute("oshiList", oshiList);
-			//２回目以降のログイン
 			Oshi nextOshi = (Oshi)application.getAttribute("oshi");
-			//推しをoshiMenに追加する
-			
 			//貢いだ総額
 			int totalMoney= nextOshi.getTotalMoney() + Integer.valueOf(firstMoney);
-			user.addTotalMoney(totalMoney);
+			loginUser.addTotalMoney(totalMoney);
 		}
 		
 		//アプリケーションコープに保存

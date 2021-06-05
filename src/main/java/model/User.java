@@ -38,4 +38,8 @@ public class User  {
 	public void addTotalMoney(int money) {
 		totalMoney += money; 
 	}
+	
+	public void addNewOshi(Oshi newOshi) {
+		oshiMen.add(newOshi);
+	}
 } 
