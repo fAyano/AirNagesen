@@ -11,6 +11,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import model.Oshi;
 import model.User;
 
@@ -46,19 +47,12 @@ public class CreateNewOshi extends HttpServlet {
 		String name = request.getParameter("name");
 		String firstMoney =  request.getParameter("firstMoney");
 		
-		//
-		ServletContext session = getServletContext();
+		//セッションスコープからloginUserを取得
+		HttpSession session = request.getSession();
 		User loginUser = (User)session.getAttribute("loginUser");
 		
 		//入力された値をプロパティに設定
 		Oshi oshi = new Oshi(name, Integer.parseInt(firstMoney),loginUser.getName());
-		
-		//リクエストスコープに保存
-		request.setAttribute("oshi", oshi);
-		
-		//フォワード
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/CreateNewOshiResult.jsp");
-		dispatcher.forward(request, response);
 		
 		//アプリケーションスコープの作成,取得
 		ServletContext application = this.getServletContext();
@@ -72,25 +66,18 @@ public class CreateNewOshi extends HttpServlet {
 		//推しをoshiMenに追加する
 		loginUser.addNewOshi(oshi);
 		
-		//初回ログインの場合
-		if(application.getAttribute("oshi")==null) {
-			//貢いだ総額
-			int totalMoney=Integer.valueOf(firstMoney);
-			loginUser.addTotalMoney(totalMoney);
-		}else {
-			//２回目以降のログイン
-			Oshi nextOshi = (Oshi)application.getAttribute("oshi");
-			//貢いだ総額
-			int totalMoney= nextOshi.getTotalMoney() + Integer.valueOf(firstMoney);
-			loginUser.addTotalMoney(totalMoney);
-		}
+		//貢いだ総額
+		int totalMoney=Integer.valueOf(firstMoney);
+		loginUser.addTotalMoney(totalMoney);
 		
 		//アプリケーションコープに保存
 		application.setAttribute("oshi", oshi);
 		
 		//結果画面に表示する
 		
-		
+		//フォワード
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/CreateNewOshiResult.jsp");
+		dispatcher.forward(request, response);
 		
 	}
 
