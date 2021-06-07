@@ -58,10 +58,9 @@ public class CreateNewOshi extends HttpServlet {
 		ServletContext application = this.getServletContext();
 		
 		//推しリストをアプリケーションスコープから取得
+		@SuppressWarnings("unchecked")
 		List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 		oshiList.add(oshi);
-		//アプリケーションコープに保存
-		application.setAttribute("oshiList", oshiList);
 		
 		//推しをoshiMenに追加する
 		loginUser.addNewOshi(oshi);
@@ -70,11 +69,7 @@ public class CreateNewOshi extends HttpServlet {
 		int totalMoney=Integer.valueOf(firstMoney);
 		loginUser.addTotalMoney(totalMoney);
 		
-		//アプリケーションコープに保存
-		application.setAttribute("oshi", oshi);
-		
-		//結果画面に表示する
-		
+		//結果画面に表示する		
 		//フォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/CreateNewOshiResult.jsp");
 		dispatcher.forward(request, response);
