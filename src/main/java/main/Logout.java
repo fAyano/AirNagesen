@@ -21,10 +21,13 @@ public class Logout extends HttpServlet {
 		
 	}
 	
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-    	request.logout();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    	HttpSession session = request.getSession();
+        session.invalidate(); 
+       
     	//ログアウト完了画面にフォワード
         RequestDispatcher dispatch = request.getRequestDispatcher("/LogoutResult.jsp");
-    	dispatch.forward(request, response);
+        dispatch.forward(request, response);
+        
     }
 }
