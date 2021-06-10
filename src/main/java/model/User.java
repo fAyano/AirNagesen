@@ -42,4 +42,8 @@ public class User  {
 	public void addNewOshi(Oshi newOshi) {
 		oshiMen.add(newOshi);
 	}
+	
+	public ArrayList<Oshi> getNewOshi() {
+		return oshiMen;
+	}
 } 
