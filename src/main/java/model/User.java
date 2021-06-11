@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class User  {
 	private String name; //ユーザーの名前
@@ -35,6 +36,10 @@ public class User  {
 		return totalMoney;
 	}
 	
+	public List<Oshi> getOshiMen(){
+		return oshiMen;
+	}
+	
 	public void addTotalMoney(int money) {
 		totalMoney += money; 
 	}
@@ -42,4 +47,5 @@ public class User  {
 	public void addNewOshi(Oshi newOshi) {
 		oshiMen.add(newOshi);
 	}
+	
 } 
