@@ -4,7 +4,7 @@
 <%
 User loginUser = (User) session.getAttribute("loginUser");
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
-Oshi newOshi = oshiList.get(oshiList.size() - 1);
+
 %>    
 <!DOCTYPE html>
 <html>
