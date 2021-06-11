@@ -4,6 +4,7 @@
 <%
 User loginUser = (User) session.getAttribute("loginUser");
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
+List<Oshi> oshiMen = loginUser.getOshiMen();
 %>    
 <!DOCTYPE html>
 <html>
@@ -43,9 +44,16 @@ List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 							<input type="text" name="money" /> 円
 						</label>
 				  		<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
-				  		<input type="submit" value="貢ぐ！">
-						
+				  		<input type="submit" value="貢ぐ！">						
 					</form>
+					<% if(!oshiMen.contains(oshiList.get(i))){ %>
+						<form action="/AirNagesen/AddToOshiMen" method="post">
+							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
+							<input type="submit" value="推す！" />
+						</form>
+					<% }else{ %>
+						<input type="button" value="推してるなう！" disabled />
+					<% } %>
 				</div>
 		<% } %>
 	</div>
