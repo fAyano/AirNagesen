@@ -3,11 +3,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/main.css">
 <meta charset="UTF-8">
 <title>推し作成画面</title>
 </head>
 <body>
-	<h1>推し作成フォーム</h1>
+	<table class="table1" border="0" cellpadding=20">
+	<tr>
+		<td align="center">
+		<a class="button1" href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a><br>
+		</td>
+		<td align="center">
+		<a class="button1" href="/AirNagesen/LogoutResult.jsp">ログアウト</a><br>
+		</td>
+	</tr>
+	</table>
+	<div id="title"><h1>推し作成画面</h1></div>
 	<form action="/AirNagesen/CreateNewOshi" method="post">
 		<label>
 		推しの名前：
@@ -21,6 +32,6 @@
 		<br/>
 		<input type="submit" value="登録">
 	</form>
-	<a href="/AirNagesen/Main.jsp">推し一覧画面に戻る</a>
+	<a class="button2" href="/AirNagesen/Main.jsp">推し一覧画面に戻る</a>
 </body>
 </html>
