@@ -11,6 +11,6 @@
 また、楽しく推しに貢ぎましょう！
 <br/>
 <br/>
-<a href="./webapp/index.jsp">→トップページへ戻る</a>
+<a href="/AirNagesen/index.jsp">→トップページへ戻る</a>
 </body>
 </html>
