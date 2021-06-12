@@ -122,6 +122,9 @@ input[type="text"]{
  	height: 80px;
  	border-radius:100%;	 
 }
+#mitsugu:hover{
+	cursor: pointer;
+}
 #osu{
 	background: #bda7da;
   	border: none;
@@ -133,6 +136,9 @@ input[type="text"]{
  	width: 60px;
  	height: 40px;
  	border-radius:25px;
+}
+#osu:hover{
+	cursor: pointer;
 }
 #oshizumi{
   	border: none;
