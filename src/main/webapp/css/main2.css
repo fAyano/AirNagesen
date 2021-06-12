@@ -145,3 +145,19 @@ input[type="text"]{
  	height: 40px;
  	border-radius:25px;
 }
+.collect{
+	color: white;
+	background-color:#3cb371;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.alert{
+	color: white;
+	background-color: #ff6347;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	text-align: center;
+}

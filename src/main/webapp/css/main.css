@@ -126,3 +126,11 @@ input[type="password"]{
 form{
 	text-align: center;
 }
+.alert{
+	color: white;
+	background-color: #ff6347;
+	width: 30%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+}

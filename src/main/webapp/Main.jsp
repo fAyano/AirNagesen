@@ -7,7 +7,6 @@ User loginUser = (User) session.getAttribute("loginUser");
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 List<Oshi> oshiMen = loginUser.getOshiMen();
 Boolean isCollect = (Boolean)request.getAttribute("isCollect");
-if(isCollect == null) isCollect = true;
 %>    
 <!DOCTYPE html>
 <html>
@@ -43,7 +42,10 @@ if(isCollect == null) isCollect = true;
 		</td>
 	</tr>
 	</table>
-	<% if(!isCollect){ %>
+	<% if(isCollect == null){ %>		
+	<% }else if(isCollect){ %>
+		<p class="collect">推しに貢ぎました！</p>
+	<% }else{ %>
 		<p class="alert">正しい値を入力してください</p>
 	<% } %>
 	<div class="box1">
