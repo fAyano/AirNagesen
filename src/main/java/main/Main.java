@@ -36,14 +36,17 @@ public class Main extends HttpServlet {
 		ServletContext application = this.getServletContext();
 		@SuppressWarnings("unchecked")
 		List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
+		
 		//もしリストが取得できなかった(nullだった)ら推しリストを新規作成してアプリケーションスコープに保存する
 		if(oshiList == null) {
 			oshiList = new ArrayList<>();
 			application.setAttribute("oshiList", oshiList);
 		}
+		
 		//ログインしているか確認するためセッションスコープからユーザー情報を取得
 		HttpSession session = request.getSession();
 		User loginUser = (User) session.getAttribute("loginUser");
+		
 		//ログインしてない場合はトップ画面にリダイレクト
 		if(loginUser == null) {
 			response.sendRedirect("/AirNagesen");
@@ -53,14 +56,6 @@ public class Main extends HttpServlet {
 			dispatcher.forward(request, response);
 		}
 
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }

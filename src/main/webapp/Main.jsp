@@ -6,6 +6,8 @@ User loginUser = (User) session.getAttribute("loginUser");
 @SuppressWarnings("unchecked")
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 List<Oshi> oshiMen = loginUser.getOshiMen();
+Boolean isCollect = (Boolean)request.getAttribute("isCollect");
+if(isCollect == null) isCollect = true;
 %>    
 <!DOCTYPE html>
 <html>
@@ -41,6 +43,9 @@ List<Oshi> oshiMen = loginUser.getOshiMen();
 		</td>
 	</tr>
 	</table>
+	<% if(!isCollect){ %>
+		<p class="alert">正しい値を入力してください</p>
+	<% } %>
 	<div class="box1">
 		<span class="boxTitle"><%= loginUser.getName() %>さんの情報</span>
 		<h4>今まで推したちに貢いだ総額：<%= loginUser.getTotalMoney() %>円</h4>

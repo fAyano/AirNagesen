@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+Boolean isCollect = (Boolean)request.getAttribute("isCollect"); 
+if(isCollect == null) isCollect = true;
+%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +35,9 @@
 		<input type="text" name="firstMoney">
 		</label>
 		<br/>
+		<% if(!isCollect){ %>
+			<p class="alert">正しい値を入力してください</p>
+		<% } %>
 		<input type="submit" value="登録">
 	</form>
 	<a class="button2" href="/AirNagesen/Main.jsp">推し一覧画面に戻る</a>
