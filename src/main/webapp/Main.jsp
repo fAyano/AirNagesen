@@ -4,6 +4,7 @@
 <%
 User loginUser = (User) session.getAttribute("loginUser");
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
+List<Oshi> oshiMen = loginUser.getOshiMen();
 %>    
 <!DOCTYPE html>
 <html>
@@ -38,6 +39,21 @@ List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 					<h3>貢がれた金額: <%=oshiList.get(i).getTotalMoney()%>円</h3>
 					<h3>ファンの人数: <%=oshiList.get(i).getTotalFans()%>人</h3>
 					<h3>作成したユーザー: <%=oshiList.get(i).getUserName()%>さん</h3>
+					<form action="/AirNagesen/GiveMoney" method="post">
+						<label>
+							<input type="text" name="money" /> 円
+						</label>
+				  		<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
+				  		<input type="submit" value="貢ぐ！">						
+					</form>
+					<% if(!oshiMen.contains(oshiList.get(i))){ %>
+						<form action="/AirNagesen/AddToOshiMen" method="post">
+							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
+							<input type="submit" value="推す！" />
+						</form>
+					<% }else{ %>
+						<input type="button" value="推してるなう！" disabled />
+					<% } %>
 				</div>
 		<% } %>
 	</div>
