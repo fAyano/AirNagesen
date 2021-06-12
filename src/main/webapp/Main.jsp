@@ -66,7 +66,7 @@ Boolean isCollect = (Boolean)request.getAttribute("isCollect");
 				<div class="box2">
 					<table border="0" cellpadding=5px>
 					<tr><td>
-					<h3>推しの名前: <%=oshiList.get(i).getName() %>様</h3></td>
+					<h3><%=oshiList.get(i).getName() %>様</h3></td>
 					<% if(!oshiMen.contains(oshiList.get(i))){ %>
  						<td><form action="/AirNagesen/AddToOshiMen" method="post">
  							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
