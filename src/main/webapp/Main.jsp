@@ -14,6 +14,7 @@ List<Oshi> oshiMen = loginUser.getOshiMen();
 <meta charset="UTF-8">
 <title>一覧画面</title>
 </head>
+
 <body>
 	<table class="table1" border="0" cellpadding="20">
 	<tr>
@@ -65,7 +66,7 @@ List<Oshi> oshiMen = loginUser.getOshiMen();
  							<input id="osu" type="submit" value="推す！" />
  						</form></td></table>
  					<% }else{ %>
- 						<td><input id="oshizumi" type="button" value="推してるなう！" disabled /></td></tr></table>
+ 						<td><input id="oshizumi" type="button" value="推し活中！" disabled /></td></tr></table>
  					<% } %>
 					<h4>貢がれた金額: <%=oshiList.get(i).getTotalMoney()%>円</h4>
 					<h4>ファンの人数: <%=oshiList.get(i).getTotalFans()%>人</h4>

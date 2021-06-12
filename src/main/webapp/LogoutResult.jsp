@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>ログアウト</title>
 </head>
+
 <body>
 <h3>
 ログアウトしました。<br>

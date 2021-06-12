@@ -20,14 +20,12 @@ import java.util.*;
 @WebServlet("/GiveMoney")
 public class GiveMoney extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
     /**
      * Default constructor. 
      */
     public GiveMoney() {
         // TODO Auto-generated constructor stub
     }
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -49,6 +47,7 @@ public class GiveMoney extends HttpServlet {
 		for(Oshi oshi : oshiList) {
 			if(oshiName.equals(oshi.getName())) {
 				oshi.addTotalMoney(money);
+
 			}
 		}
 
@@ -59,3 +58,4 @@ public class GiveMoney extends HttpServlet {
 	}
 
 }
+

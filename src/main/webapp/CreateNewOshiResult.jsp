@@ -13,6 +13,7 @@ Oshi newOshi = oshiList.get(oshiList.size() - 1);
 <meta charset="UTF-8">
 <title>推し作成完了画面</title>
 </head>
+
 <body>
 	<table class="table1" border="0" cellpadding="20">
 	<tr>
