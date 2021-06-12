@@ -1,0 +1,130 @@
+body{
+	color:#374770;
+}
+h1{ 
+	margin-top:100px;
+  	text-align:center;
+  	display: inline-block;
+  	padding: 30px;
+  	border: solid 3px #b7ee93;	
+  	position: relative;
+}
+h1:after{
+  	content: "";
+  	border: solid 3px #bda7da;
+  	position: absolute;
+  	top: 5px;
+  	left: 5px;
+  	width: 100%;
+  	height: 100%;
+}
+#title{
+  	margin:0 40%;
+  	width:500px;
+}
+#title2{
+  	margin:0 30%;
+  	width:500px;
+}
+#d{
+	text-align: center;
+}
+.box1{
+	position: relative;
+    margin: auto;
+    padding: 0.5em 1em;
+    border: solid 3px #b7ee93;
+    border-radius: 8px;
+    width:800px;
+}
+.box3{
+	position: relative;
+    margin: auto;
+    padding: 0.5em 1em;
+    border: solid 3px #bda7da;
+    border-radius: 8px;
+    width:800px;
+}
+.boxTitle{
+	position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 30px;
+    background: #FFF;
+    color: #374770;
+    font-weight: bold;
+}
+
+.button1{
+	position: relative;
+  	display: inline-block;
+  	color: #1B1B1B;
+  	text-decoration: none;
+  	border-bottom: solid 3px #b7ee93;
+}
+
+.button2{
+	font-size: 20px;
+	display: inline-block;
+  	background-color: #bda7da;
+  	color: #FFF;
+  	width: 200px;
+  	height: 30px;
+  	padding: 0.8em;
+  	text-decoration: none;
+  	border-radius: 5px;
+  	
+  	
+}
+.button2:hover{
+	cursor: pointer;
+	text-decoration: none;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
+}
+.table1{
+	float: right;
+}
+.table2{
+	margin: 3px auto; 
+}
+.box2{
+	display: inline-block;   
+    height: 320px; 
+	width: 350px;
+	padding: 0 20px;
+	margin-top: 20px; 
+	margin-bottom: 10px; 
+	border: 2px solid #bda7da; 
+	border-radius: 20px;
+	background: #f4f5ff;
+}
+span{
+	font-weight: bold;
+	font-size: 20px;
+	background:linear-gradient(transparent 60%, #b7ee93 60%);
+}
+input[type="submit"]{
+  background: #e0505c;
+  border: none;
+  color: white;
+  font-size:17px;
+  font-weight:bold;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+input[type="text"]{
+  padding: 10px 20px;
+  margin: 10px 5px;
+}
+input[type="password"]{
+  padding: 10px 20px;
+  margin: 10px 5px;
+}
+form{
+	text-align: center;
+}
+
+
