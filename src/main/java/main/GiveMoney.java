@@ -1,5 +1,7 @@
 package main;
+
 import java.io.IOException;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
@@ -8,8 +10,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+
 import model.*;
 import java.util.*;
+
 /**
  * Servlet implementation class GiveMoney
  */
@@ -22,6 +26,7 @@ public class GiveMoney extends HttpServlet {
     public GiveMoney() {
         // TODO Auto-generated constructor stub
     }
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -42,12 +47,15 @@ public class GiveMoney extends HttpServlet {
 		for(Oshi oshi : oshiList) {
 			if(oshiName.equals(oshi.getName())) {
 				oshi.addTotalMoney(money);
- 			}
- 		}
-		
- 		//Main.jspにフォワード
- 		RequestDispatcher dispatcher = request.getRequestDispatcher("/Main.jsp");
- 		dispatcher.forward(request, response);
+
+			}
+		}
+
+		//Main.jspにフォワード
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/Main.jsp");
+		dispatcher.forward(request, response);
 
 	}
+
 }
+

@@ -3,6 +3,7 @@
 <%@ page import = "model.User,model.Oshi, java.util.*" %>
 <%
 User loginUser = (User) session.getAttribute("loginUser");
+@SuppressWarnings("unchecked")
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 List<Oshi> oshiMen = loginUser.getOshiMen();
 %>    
@@ -15,7 +16,7 @@ List<Oshi> oshiMen = loginUser.getOshiMen();
 </head>
 
 <body>
-	<table class="table1" border="0" cellpadding=20">
+	<table class="table1" border="0" cellpadding="20">
 	<tr>
 		<td align="center">
 		<a class="button1" href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a><br>
