@@ -8,7 +8,7 @@
 <title>推し作成画面</title>
 </head>
 <body>
-	<table class="table1" border="0" cellpadding=20">
+	<table class="table1" border="0" cellpadding="20">
 	<tr>
 		<td align="center">
 		<a class="button1" href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a><br>

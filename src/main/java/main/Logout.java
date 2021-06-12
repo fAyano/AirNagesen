@@ -9,8 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.LoginLogic;
-import model.User;
+
 
 @WebServlet("/Logout")
 public class Logout extends HttpServlet {
