@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>ログイン成功</title>
 </head>
+
 <body>
 	<div id="title"><h1>エア投げ銭</h1></div>
 	<% if(loginUser != null){ %>

@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>ログイン画面</title>
 </head>
+
 <body>
 	<div id="title"><h1>エア投げ銭</h1></div>
 	<form action="/AirNagesen/Login" method="post">

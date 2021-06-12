@@ -22,6 +22,13 @@ h1:after{
   	margin:0 40%;
   	width:500px;
 }
+#title2{
+  	margin:0 30%;
+  	width:500px;
+}
+#d{
+	text-align: center;
+}
 .box1{
 	position: relative;
     margin: auto;
@@ -84,7 +91,7 @@ h1:after{
 	margin: 3px auto; 
 }
 .box2{
-	display: inline-block;/*‰¡•À‚Ñ‚É‚·‚é*/
+	display: inline-block;   
     height: 320px; 
 	width: 350px;
 	padding: 0 20px;
@@ -99,45 +106,42 @@ span{
 	font-size: 20px;
 	background:linear-gradient(transparent 60%, #b7ee93 60%);
 }
+input[type="text"]{
+  padding: 10px 20px;
+  margin: 10px 5px;
+}
 #mitsugu{
+	background: #bda7da;
   	border: none;
   	color: white;
   	font-size:17px;
   	font-weight:bold;
-  	margin: -20px 5px;
-  	width:80px;
-  	height:80px;
-  	background:#bda7da; 
-  	border-radius:100%;
+  	padding: 10px 20px;
+ 	margin: -20px 5px;
+ 	width: 80px;
+ 	height: 80px;
+ 	border-radius:100%;	 
 }
 #osu{
+	background: #bda7da;
   	border: none;
-  	color: white;	
+  	color: white;
   	font-size:17px;
   	font-weight:bold;
-  	margin: -20px 5px;
-  	padding:0 10px;
-  	width:70px;
-  	height:40px;
-  	border-radius:25px;
-  	background:#bda7da; 
+  	padding: 5px 10px;
+ 	margin: -20px 5px;
+ 	width: 60px;
+ 	height: 40px;
+ 	border-radius:25px;
 }
 #oshizumi{
-	border: none;
-  	color: white;	
+  	border: none;
+  	color: white;
   	font-size:17px;
   	font-weight:bold;
-  	margin: -20px 5px;
-  	padding:0 10px;
-  	width:120px;
-  	height:40px;
-  	border-radius:25px;
-}
-input[type="text"]{
-  	padding: 10px 20px;
-  	margin: 10px 5px;
-}
-input[type="password"]{
-  	padding: 10px 20px;
-  	margin: 10px 5px;
+  	padding: 5px 10px;
+ 	margin: 0px 5px;
+ 	width: 120px;
+ 	height: 40px;
+ 	border-radius:25px;
 }

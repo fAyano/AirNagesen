@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>推し作成画面</title>
 </head>
+
 <body>
 	<table class="table1" border="0" cellpadding=20">
 	<tr>
