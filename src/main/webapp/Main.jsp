@@ -4,11 +4,12 @@
 <%
 User loginUser = (User) session.getAttribute("loginUser");
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
+List<Oshi> oshiMen = loginUser.getOshiMen();
 %>    
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/main.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/main2.css">
 <meta charset="UTF-8">
 <title>一覧画面</title>
 </head>
@@ -54,10 +55,27 @@ List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 		<span class="boxTitle">みんなが作成した推し一覧</span>
 		<% for(int i=0;i<oshiList.size();i++){ %>
 				<div class="box2">
-					<h3>推しの名前: <%=oshiList.get(i).getName() %>様</h3>
+					<table border="0" cellpadding=5px>
+					<tr><td>
+					<h3>推しの名前: <%=oshiList.get(i).getName() %>様</h3></td>
+					<% if(!oshiMen.contains(oshiList.get(i))){ %>
+ 						<td><form action="/AirNagesen/AddToOshiMen" method="post">
+ 							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
+ 							<input id="osu" type="submit" value="推す！" />
+ 						</form></td></table>
+ 					<% }else{ %>
+ 						<td><input id="oshizumi" type="button" value="推してるなう！" disabled /></td></tr></table>
+ 					<% } %>
 					<h4>貢がれた金額: <%=oshiList.get(i).getTotalMoney()%>円</h4>
 					<h4>ファンの人数: <%=oshiList.get(i).getTotalFans()%>人</h4>
 					<h4>作成したユーザー: <%=oshiList.get(i).getUserName()%>さん</h4>
+					<form action="/AirNagesen/GiveMoney" method="post">
+						<label>
+ 							<input type="text" name="money" /> 円
+ 						</label>
+ 				  		<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
+ 				  		<input id="mitsugu" type="submit" value="貢ぐ！">						
+ 					</form>
 				</div>
 		<% } %>
 	</div>
