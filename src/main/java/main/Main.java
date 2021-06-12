@@ -40,6 +40,13 @@ public class Main extends HttpServlet {
 		//もしリストが取得できなかった(nullだった)ら推しリストを新規作成してアプリケーションスコープに保存する
 		if(oshiList == null) {
 			oshiList = new ArrayList<>();
+			//初期推しデータ作成
+			Oshi oshi1 = new Oshi("ジョンウ", 500000, "tori");
+			Oshi oshi2 = new Oshi("宮田俊哉", 300000, "tsuyu");
+			Oshi oshi3 = new Oshi("源清麿", 176000, "piyo");
+			oshiList.add(oshi1);
+			oshiList.add(oshi2);
+			oshiList.add(oshi3);
 			application.setAttribute("oshiList", oshiList);
 		}
 		
