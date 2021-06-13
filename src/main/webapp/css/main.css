@@ -19,7 +19,8 @@ h1:after{
   	height: 100%;
 }
 #title{
-  	margin:0 40%;
+	text-align: center;
+  	margin:0 auto;
   	width:500px;
 }
 #title2{
@@ -124,5 +125,13 @@ input[type="password"]{
   margin: 10px 5px;
 }
 form{
+	text-align: center;
+}
+.alert{
+	color: white;
+	background-color: #ff6347;
+	width: 30%;
+	margin: 0 auto;
+	margin-bottom: 10px;
 	text-align: center;
 }

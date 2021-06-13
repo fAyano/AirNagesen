@@ -6,6 +6,7 @@ User loginUser = (User) session.getAttribute("loginUser");
 @SuppressWarnings("unchecked")
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 List<Oshi> oshiMen = loginUser.getOshiMen();
+Boolean isCollect = (Boolean)request.getAttribute("isCollect");
 %>    
 <!DOCTYPE html>
 <html>
@@ -41,6 +42,12 @@ List<Oshi> oshiMen = loginUser.getOshiMen();
 		</td>
 	</tr>
 	</table>
+	<% if(isCollect == null){ %>		
+	<% }else if(isCollect){ %>
+		<p class="collect">推しに貢ぎました！</p>
+	<% }else{ %>
+		<p class="alert">正しい値を入力してください</p>
+	<% } %>
 	<div class="box1">
 		<span class="boxTitle"><%= loginUser.getName() %>さんの情報</span>
 		<h4>今まで推したちに貢いだ総額：<%= loginUser.getTotalMoney() %>円</h4>
@@ -59,7 +66,7 @@ List<Oshi> oshiMen = loginUser.getOshiMen();
 				<div class="box2">
 					<table border="0" cellpadding=5px>
 					<tr><td>
-					<h3>推しの名前: <%=oshiList.get(i).getName() %>様</h3></td>
+					<h3><%=oshiList.get(i).getName() %>様</h3></td>
 					<% if(!oshiMen.contains(oshiList.get(i))){ %>
  						<td><form action="/AirNagesen/AddToOshiMen" method="post">
  							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
