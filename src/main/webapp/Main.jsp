@@ -7,6 +7,10 @@ User loginUser = (User) session.getAttribute("loginUser");
 List<Oshi> oshiList = (List<Oshi>) application.getAttribute("oshiList");
 List<Oshi> oshiMen = loginUser.getOshiMen();
 Boolean isCollect = (Boolean)request.getAttribute("isCollect");
+Boolean isSuccessfulAddOshi = (Boolean)request.getAttribute("isSuccessfulAddOshi");
+if(isSuccessfulAddOshi == null){
+	isSuccessfulAddOshi = false;
+}
 %>    
 <!DOCTYPE html>
 <html>
@@ -48,6 +52,9 @@ Boolean isCollect = (Boolean)request.getAttribute("isCollect");
 	<% }else{ %>
 		<p class="alert">正しい値を入力してください</p>
 	<% } %>
+	<% if(isSuccessfulAddOshi){ %>
+		<p class="collect">推しメンを追加しました！</p>
+	<% } %>		
 	<div class="box1">
 		<span class="boxTitle"><%= loginUser.getName() %>さんの情報</span>
 		<h4>今まで推したちに貢いだ総額：<%= loginUser.getTotalMoney() %>円</h4>

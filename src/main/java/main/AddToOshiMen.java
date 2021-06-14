@@ -49,6 +49,7 @@ public class AddToOshiMen extends HttpServlet {
 				loginUser.addNewOshi(oshi);
 			}
 		}
+		request.setAttribute("isSuccessfulAddOshi", true);
 		//Main.jspにフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/Main.jsp");
 		dispatcher.forward(request, response);
