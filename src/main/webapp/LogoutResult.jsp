@@ -7,14 +7,10 @@
 <meta charset="UTF-8">
 <title>ログアウト</title>
 </head>
-
 <body>
-<h3>
-ログアウトしました。<br>
-また、楽しく推しに貢ぎましょう！
-</h3>
-<br>
-<br>
-<a class="button2" href="/AirNagesen/index.jsp">→トップページへ戻る</a>
+	<h3>ログアウトしました。<br>また、楽しく推しに貢ぎましょう！</h3>
+	<br>
+	<br>
+	<a class="button2" href="/AirNagesen/index.jsp">→トップページへ戻る</a>
 </body>
 </html>

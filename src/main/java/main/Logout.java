@@ -25,8 +25,8 @@ public class Logout extends HttpServlet {
         session.invalidate(); 
        
     	//ログアウト完了画面にフォワード
-        RequestDispatcher dispatch = request.getRequestDispatcher("/LogoutResult.jsp");
-        dispatch.forward(request, response);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/LogoutResult.jsp");
+        dispatcher.forward(request, response);
         
     }
 }
