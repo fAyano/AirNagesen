@@ -77,8 +77,8 @@ h1:after{
   	padding: 0.8em;
   	text-decoration: none;
   	border-radius: 5px;
-  	
-  	
+  	text-align: center;
+  	margin: 0 auto; 	
 }
 .button2:hover{
 	cursor: pointer;
@@ -133,5 +133,8 @@ form{
 	width: 30%;
 	margin: 0 auto;
 	margin-bottom: 10px;
+	text-align: center;
+}
+.logout-container{
 	text-align: center;
 }
