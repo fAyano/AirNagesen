@@ -27,7 +27,7 @@ if(isSuccessfulAddOshi == null){
 		<a class="button1" href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a><br>
 		</td>
 		<td align="center">
-		<a class="button1" href="/AirNagesen/LogoutResult.jsp">ログアウト</a><br>
+		<a class="button1" href="/AirNagesen/Logout">ログアウト</a><br>
 		</td>
 		<td align="center">
 		<a class="button1" href="/AirNagesen/Main">更新する</a><br>
