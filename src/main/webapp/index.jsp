@@ -9,11 +9,13 @@
 </head>
 
 <body>
+	<div class="t">
 	<div id="title"><h1>エア投げ銭</h1></div>
 	<form action="/AirNagesen/Login" method="post">
 		ユーザー名：<input type="text" name="name"><br>
 		パスワード：<input type="password" name="pass"><br>
 		<input type="submit" value="ログイン">
 	</form>	
+	</div>
 </body>
 </html>
