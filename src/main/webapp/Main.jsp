@@ -15,7 +15,7 @@ if(isSuccessfulAddOshi == null){
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/main2.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/main.css">
 <meta charset="UTF-8">
 <title>一覧画面</title>
 </head>
@@ -73,7 +73,13 @@ if(isSuccessfulAddOshi == null){
 				<div class="box2">
 					<table border="0" cellpadding=5px>
 					<tr><td>
-					<h3><%=oshiList.get(i).getName() %>様</h3></td>
+					<% if(oshiList.get(i).getName().length()<9){%>
+						<h3><%=oshiList.get(i).getName() %>様</h3></td>
+					<% }else if(oshiList.get(i).getName().length()<12){%>
+						<h4><%=oshiList.get(i).getName() %>様</h4></td>
+					<%}else{%>
+						<h5><%=oshiList.get(i).getName() %>様</h5></td>
+					<% }%>
 					<% if(!oshiMen.contains(oshiList.get(i))){ %>
  						<td><form action="/AirNagesen/AddToOshiMen" method="post">
  							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />

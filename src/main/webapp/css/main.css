@@ -62,7 +62,7 @@ h1:after{
 .button1{
 	position: relative;
   	display: inline-block;
-  	color: #1B1B1B;
+  	color: #374770;
   	text-decoration: none;
   	border-bottom: solid 3px #b7ee93;
 }
@@ -136,5 +136,63 @@ form{
 	text-align: center;
 }
 .logout-container{
+	text-align: center;
+}
+
+#mitsugu{
+	background: #bda7da;
+  	border: none;
+  	color: white;
+  	font-size:17px;
+  	font-weight:bold;
+  	padding: 10px 20px;
+ 	margin: -20px 5px;
+ 	width: 80px;
+ 	height: 80px;
+ 	border-radius:100%;	 
+}
+#mitsugu:hover{
+	cursor: pointer;
+}
+#osu{
+	background: #bda7da;
+  	border: none;
+  	color: white;
+  	font-size:17px;
+  	font-weight:bold;
+  	padding: 5px 10px;
+ 	margin: -20px 5px;
+ 	width: 60px;
+ 	height: 40px;
+ 	border-radius:25px;
+}
+#osu:hover{
+	cursor: pointer;
+}
+#oshizumi{
+  	border: none;
+  	color: white;
+  	font-size:17px;
+  	font-weight:bold;
+  	padding: 5px 10px;
+ 	margin: 0px 5px;
+ 	width: 120px;
+ 	height: 40px;
+ 	border-radius:25px;
+}
+.collect{
+	color: white;
+	background-color:#3cb371;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.alert{
+	color: white;
+	background-color: #ff6347;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 15px;
 	text-align: center;
 }
