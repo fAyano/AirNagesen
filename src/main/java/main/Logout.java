@@ -10,7 +10,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-
 @WebServlet("/Logout")
 public class Logout extends HttpServlet {
 	
@@ -26,7 +25,6 @@ public class Logout extends HttpServlet {
        
     	//ログアウト完了画面にフォワード
         RequestDispatcher dispatcher = request.getRequestDispatcher("/LogoutResult.jsp");
-        dispatcher.forward(request, response);
-        
+        dispatcher.forward(request, response);  
     }
 }

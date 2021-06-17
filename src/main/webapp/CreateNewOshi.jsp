@@ -11,7 +11,6 @@ if(isCollect == null) isCollect = true;
 <meta charset="UTF-8">
 <title>推し作成画面</title>
 </head>
-
 <body>
 	<jsp:include page="/components/Header.jsp" />
 	<div id="title"><h1>推し作成画面</h1></div>

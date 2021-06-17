@@ -15,7 +15,7 @@ public class User  {
 		this.totalMoney = 0;
 		oshiMen = new ArrayList<Oshi>();
 	}
-	
+	//ユーザーの名前を返す
 	public String getName(){
 		return name;
 	}
@@ -23,7 +23,7 @@ public class User  {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	//パスワードを返す
 	public String getPass() {
 		return pass;
 	}
@@ -31,11 +31,11 @@ public class User  {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	
+	//ユーザーが今までに貢いだ総額を返す
 	public int getTotalMoney() {
 		return totalMoney;
 	}
-	
+	//ユーザーが今までに推してきた推しを返す
 	public List<Oshi> getOshiMen(){
 		return oshiMen;
 	}

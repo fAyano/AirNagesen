@@ -19,7 +19,6 @@ if(isSuccessfulAddOshi == null){
 <meta charset="UTF-8">
 <title>一覧画面</title>
 </head>
-
 <body>
 	<jsp:include page="/components/Header.jsp" />
 	<div id="title"><h1>一覧画面</h1></div>

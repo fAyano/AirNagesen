@@ -20,14 +20,12 @@ import model.User;
 @WebServlet("/CreateNewOshi")
 public class CreateNewOshi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
     /**
      * Default constructor. 
      */
     public CreateNewOshi() {
         // TODO Auto-generated constructor stub
     }
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -36,7 +34,6 @@ public class CreateNewOshi extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/CreateNewOshiResult.jsp");
 		dispatcher.forward(request, response);
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -83,9 +80,7 @@ public class CreateNewOshi extends HttpServlet {
 			//フォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/CreateNewOshi.jsp");
 			dispatcher.forward(request, response);
-		}
-
-		
+		}	
 	}
 
 }
