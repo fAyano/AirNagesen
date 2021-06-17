@@ -13,16 +13,7 @@ if(isCollect == null) isCollect = true;
 </head>
 
 <body>
-	<table class="table1" border="0" cellpadding="20">
-	<tr>
-		<td align="center">
-		<a class="button1" href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a><br>
-		</td>
-		<td align="center">
-		<a class="button1" href="/AirNagesen/LogoutResult.jsp">ログアウト</a><br>
-		</td>
-	</tr>
-	</table>
+	<jsp:include page="/components/Header.jsp" />
 	<div id="title"><h1>推し作成画面</h1></div>
 	<div class="d">
 	<form action="/AirNagesen/CreateNewOshi" method="post">

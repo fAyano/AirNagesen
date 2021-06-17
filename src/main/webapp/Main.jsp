@@ -21,20 +21,7 @@ if(isSuccessfulAddOshi == null){
 </head>
 
 <body>
-	<table class="table1" border="0" cellpadding="20">
-	<tr>
-		<td align="center">
-		<a class="button1" href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a><br>
-		</td>
-		<td align="center">
-		<a class="button1" href="/AirNagesen/Logout">ログアウト</a><br>
-		</td>
-		<td align="center">
-		<a class="button1" href="/AirNagesen/Main">更新する</a><br>
-		</td>
-	</tr>
-	</table>
-	
+	<jsp:include page="/components/Header.jsp" />
 	<div id="title"><h1>一覧画面</h1></div>
 	<table class="table2" border="0" cellpadding=30">
 	<tr>

@@ -15,16 +15,7 @@ Oshi newOshi = oshiList.get(oshiList.size() - 1);
 </head>
 
 <body>
-	<table class="table1" border="0" cellpadding="20">
-	<tr>
-		<td align="center">
-		<a class="button1" href="/AirNagesen/CreateNewOshi.jsp">推し作成画面へ</a><br>
-		</td>
-		<td align="center">
-		<a class="button1" href="/AirNagesen/LogoutResult.jsp">ログアウト</a><br>
-		</td>
-	</tr>
-	</table>
+	<jsp:include page="/components/Header.jsp" />
 	<h1 id="title2">新しい推しの作成が完了しました</h1>
 	<div class="d">
 	<h2>名前：<%= newOshi.getName() %> 様</h2>
