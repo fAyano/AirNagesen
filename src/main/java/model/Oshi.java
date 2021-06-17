@@ -13,7 +13,7 @@ public class Oshi {
 		this.totalFans = 1;
 		this.userName= userName;
 	}
-	
+	//推しの名前を返す
 	public String getName() {
 		return name;
 	}
@@ -21,7 +21,7 @@ public class Oshi {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	//貢がれた総額を返す
 	public int getTotalMoney() {
 		return totalMoney;
 	}
@@ -29,7 +29,7 @@ public class Oshi {
 	public void addTotalMoney(int money) {
 		totalMoney += money;
 	}
-	
+	//ファンの総数を返す
 	public int getTotalFans() {
 		return totalFans;
 	}
@@ -37,7 +37,7 @@ public class Oshi {
 	public void addTotalFans() {
 		totalFans++;
 	}
-	
+	//推しを作成したユーザー名を返す
 	public String getUserName() {
 		return userName;
 	}

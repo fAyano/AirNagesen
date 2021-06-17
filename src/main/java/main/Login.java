@@ -51,7 +51,5 @@ public class Login extends HttpServlet {
 	    //ログイン完了画面にフォワード
 	    RequestDispatcher dispatcher = request.getRequestDispatcher("/LoginResult.jsp");
 		dispatcher.forward(request, response);
-		
 	}
-
 }

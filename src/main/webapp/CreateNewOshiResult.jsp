@@ -13,7 +13,6 @@ Oshi newOshi = oshiList.get(oshiList.size() - 1);
 <meta charset="UTF-8">
 <title>推し作成完了画面</title>
 </head>
-
 <body>
 	<jsp:include page="/components/Header.jsp" />
 	<h1 id="title2">新しい推しの作成が完了しました</h1>
