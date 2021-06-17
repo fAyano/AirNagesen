@@ -24,6 +24,7 @@ if(isCollect == null) isCollect = true;
 	</tr>
 	</table>
 	<div id="title"><h1>推し作成画面</h1></div>
+	<div class="d">
 	<form action="/AirNagesen/CreateNewOshi" method="post">
 		<label>
 		推しの名前：
@@ -41,5 +42,6 @@ if(isCollect == null) isCollect = true;
 		<input type="submit" value="登録">
 	</form>
 	<a class="button2" href="/AirNagesen/Main.jsp">推し一覧画面に戻る</a>
+	</div>
 </body>
 </html>

@@ -12,16 +12,14 @@
 
 <body>
 	<div id="title"><h1>エア投げ銭</h1></div>
+	<div class="d">
 	<% if(loginUser != null){ %>
-		<div id="d">
 			<h3>ログインに成功しました！ようこそ、<%= loginUser.getName() %>さん</h3>		
-			<a class="button2" href="/AirNagesen/Main">推し一覧画面へ</a>
-		</div>
+			<a class="button2" href="/AirNagesen/Main">推し一覧画面へ</a>	
 	<% }else{ %>
-		<div id="d">
 			<h3>ログインに失敗しました</h3>
 			<a class="button2" href="/AirNagesen">トップへ</a>
-		</div>
 	<% } %>
+	</div>
 </body>
 </html>
