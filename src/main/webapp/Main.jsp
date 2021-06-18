@@ -67,7 +67,7 @@ if(isSuccessfulDeleteOshi == null){
 					<table border="0" cellpadding=5px>
 					<tr><td>
 					<% if(oshiList.get(i).getName().length()<9){%>
-						<h3><%=oshiList.get(i).getName() %>様</h3></td>
+						<h3 class="oshi-name"><%=oshiList.get(i).getName() %>様</h3></td>
 					<% }else if(oshiList.get(i).getName().length()<12){%>
 						<h4><%=oshiList.get(i).getName() %>様</h4></td>
 					<%}else{%>
@@ -77,14 +77,15 @@ if(isSuccessfulDeleteOshi == null){
  						<td><form action="/AirNagesen/AddToOshiMen" method="post">
  							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
  							<input id="osu" type="submit" value="推す！" />
+ 							<input class="tan-ori" type="button" value="担降りする" disabled /> 
  						</form></td></table>
  					<% }else{ %>
- 						<td><input id="oshizumi" type="button" value="推し活中！" disabled />
- 						</td></tr></table>
+ 						<td><input id="osu" type="button" value="推し活中！" disabled />
  						<form action="/AirNagesen/DeleteOshiMen" method="post">
  							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
- 							<input type="submit" value="担降りする" /> 
- 						</form>					
+ 							<input class="tan-ori" type="submit" value="担降りする" /> 
+ 						</form>
+ 						</td></tr></table>
  					<% } %>
 					<h4>貢がれた金額: <%=oshiList.get(i).getTotalMoney()%>円</h4>
 					<h4>ファンの人数: <%=oshiList.get(i).getTotalFans()%>人</h4>
