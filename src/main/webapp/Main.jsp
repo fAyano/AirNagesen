@@ -11,6 +11,10 @@ Boolean isSuccessfulAddOshi = (Boolean)request.getAttribute("isSuccessfulAddOshi
 if(isSuccessfulAddOshi == null){
 	isSuccessfulAddOshi = false;
 }
+Boolean isSuccessfulDeleteOshi = (Boolean)request.getAttribute("isSuccessfulDeleteOshi");
+if(isSuccessfulDeleteOshi == null){
+	isSuccessfulDeleteOshi  = false;
+}
 %>    
 <!DOCTYPE html>
 <html>
@@ -40,7 +44,10 @@ if(isSuccessfulAddOshi == null){
 	<% } %>
 	<% if(isSuccessfulAddOshi){ %>
 		<p class="collect">推しメンを追加しました！</p>
-	<% } %>		
+	<% } %>	
+	<% if(isSuccessfulDeleteOshi){ %>
+		<p class="collect">担降りしました....</p>
+	<% } %>	
 	<div class="box1">
 		<span class="boxTitle"><%= loginUser.getName() %>さんの情報</span>
 		<h4>今まで推したちに貢いだ総額：<%= loginUser.getTotalMoney() %>円</h4>
@@ -72,7 +79,12 @@ if(isSuccessfulAddOshi == null){
  							<input id="osu" type="submit" value="推す！" />
  						</form></td></table>
  					<% }else{ %>
- 						<td><input id="oshizumi" type="button" value="推し活中！" disabled /></td></tr></table>
+ 						<td><input id="oshizumi" type="button" value="推し活中！" disabled />
+ 						</td></tr></table>
+ 						<form action="/AirNagesen/DeleteOshiMen" method="post">
+ 							<input type="hidden" name="oshiName" value=<%= oshiList.get(i).getName() %> />
+ 							<input type="submit" value="担降りする" /> 
+ 						</form>					
  					<% } %>
 					<h4>貢がれた金額: <%=oshiList.get(i).getTotalMoney()%>円</h4>
 					<h4>ファンの人数: <%=oshiList.get(i).getTotalFans()%>人</h4>
