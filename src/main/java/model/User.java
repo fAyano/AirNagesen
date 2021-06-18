@@ -48,4 +48,8 @@ public class User  {
 		oshiMen.add(newOshi);
 	}
 	
+	public void removeOshi(int index) {
+		oshiMen.remove(index);
+	}
+	
 } 

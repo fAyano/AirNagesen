@@ -97,7 +97,7 @@ h1:after{
 }
 .box2{
 	display: inline-block;   
-    height: 320px; 
+    height: 400px; 
 	width: 350px;
 	padding: 0 20px;
 	margin-top: 20px; 
@@ -168,13 +168,19 @@ form{
   	font-weight:bold;
   	padding: 5px 10px;
  	margin: -20px 5px;
- 	width: 60px;
+ 	width: 100px;
  	height: 40px;
  	border-radius:25px;
+ 	margin: 10px;
 }
 #osu:hover{
 	cursor: pointer;
 }
+#osu:disabled{
+	background: #d9d9d9;
+	cursor: default;
+}
+
 #oshizumi{
   	border: none;
   	color: white;
@@ -244,3 +250,23 @@ form{
   transform: scale(1, 1);
 }
 
+.tan-ori{
+	background: #e0505c;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.tan-ori:disabled{
+	background: #d9d9d9;
+	cursor: default;
+}
+
+.oshi-name{
+	margin-left: 30px;
+	width: 160px;
+}

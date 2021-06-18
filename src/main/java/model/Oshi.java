@@ -29,6 +29,7 @@ public class Oshi {
 	public void addTotalMoney(int money) {
 		totalMoney += money;
 	}
+	
 	//ファンの総数を返す
 	public int getTotalFans() {
 		return totalFans;
@@ -37,6 +38,11 @@ public class Oshi {
 	public void addTotalFans() {
 		totalFans++;
 	}
+	
+	public void decreaseTotalFans() {
+		totalFans--;
+	}
+	
 	//推しを作成したユーザー名を返す
 	public String getUserName() {
 		return userName;
