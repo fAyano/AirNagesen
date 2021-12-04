@@ -1,5 +1,7 @@
 # エア投げ銭webアプリ
 
+![giphy](https://user-images.githubusercontent.com/75403424/144709610-eb8abdaf-b1b6-45ec-aaee-32f8717b60a2.gif)
+
 ## チーム名
 チーム文殊の知恵
 
